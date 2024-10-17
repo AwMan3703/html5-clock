@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clock</title>
+
+	<link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+	<main>
+		<nav></nav>
+
+		<div id="clock">
+			<h1 id="time">
+				<span id="hour">Syncing time...</span>
+				<span id="seconds"></span>
+			</h1>
+			<h3 id="date">Syncing date...</h3>
+		</div>
+
+		<footer>
+			<div id="options">
+				<label for="font-picker">Font:</label>
+				<select name="font-picker" id="font-picker">
+					<option value="sans-serif">Sans serif</option>
+					<option value="serif">Serif</option>
+					<option value="monospace">Mono</option>
+					<option value="fantasy">Fantasy</option>
+					<option value="cursive">Cursive</option>
+				</select>
+				<label for="color-picker">Color:</label>
+				<input type="color" id="color-picker">
+				<input type="button" id="share-button" value="Share clock">
+			</div>
+		</footer>
+	</main>
+
+	<script src="js/utility.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
