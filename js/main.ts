@@ -10,19 +10,15 @@ const colorPicker = document.querySelector('#color-picker');
 const fontPicker = document.querySelector('#font-picker');
 const shareButton = document.querySelector('#share-button');
 
-function addLeadingZeroes(value: string | number, target_size: number): string {
-    value = value.toString()
-    if (value.length >= target_size) { return value }
-    // @ts-ignore
-    return '0'.repeat(target_size - value.length) + value
-}
-
 function updateClock() {
     const now = new Date();
 
+    // @ts-ignore
     const currentTime = `${addLeadingZeroes(now.getHours(), 2)}:${addLeadingZeroes(now.getMinutes(), 2)}`;
+    // @ts-ignore
     const currentSeconds = `${addLeadingZeroes(now.getSeconds(), 2)}`
-    const currentDate = `${addLeadingZeroes(now.getDay(), 2)} / ${addLeadingZeroes(now.getMonth(), 2)} / ${addLeadingZeroes(now.getFullYear(), 4)}`;
+    // @ts-ignore
+    const currentDate = `${addLeadingZeroes(now.getDate(), 2)} / ${addLeadingZeroes(now.getMonth()+1, 2)} / ${addLeadingZeroes(now.getFullYear(), 4)}`;
 
     // @ts-ignore
     timeElement.innerText = currentTime;

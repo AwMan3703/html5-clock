@@ -5,3 +5,8 @@ function hexToRGB(hex: string) {
 
     return { r: r, g: g, b: b, mainColor: Math.max(r, g, b) === r ? 'r' : Math.max(r, g, b) === g ? 'g' : 'b' }
 }
+
+function addLeadingZeroes(value: string | number, target_size: number): string {
+    // @ts-ignore
+    return value.toString().padStart(target_size, '0');
+}
