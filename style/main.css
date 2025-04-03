@@ -24,10 +24,12 @@ main {
   align-items: center;
 }
 #clock {
+  user-select: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5em;
 }
 #seconds {
   font-size: 4rem;

@@ -1,3 +1,4 @@
+// CONSTANTS
 var URLParams = new URLSearchParams(window.location.search);
 var url_color = URLParams.get("c");
 var url_font = URLParams.get("f");
@@ -7,6 +8,7 @@ var dateElement = document.querySelector('#date');
 var colorPicker = document.querySelector('#color-picker');
 var fontPicker = document.querySelector('#font-picker');
 var shareButton = document.querySelector('#share-button');
+// FUNCTIONS
 function updateClock() {
     var now = new Date();
     // @ts-ignore
