@@ -34,8 +34,8 @@ function updateColors(backgroundColor: string) {
     const isLightColor = ((rgb.r + rgb.g + rgb.b) / 3) > (255 / 2)
     let newColor = `rgb(${255-rgb.r},${255-rgb.g},${255-rgb.b})`
 
-    document.body.style.color = newColor;//isLightColor ? 'black' : 'white';
-    document.body.style.backgroundColor = backgroundColor;
+    document.body.style.setProperty("--foreground", newColor);//isLightColor ? 'black' : 'white';
+    document.body.style.setProperty("--background", backgroundColor);
 
     // @ts-ignore
     colorPicker.value = backgroundColor
@@ -45,7 +45,16 @@ function updateFont(font: string) {
     document.body.style.fontFamily = font
 }
 
-// Setup
+
+// SCRIPT
+
+// @ts-ignore
+timeElement.addEventListener('click', _ => { navigator.clipboard.writeText(timeElement.innerText) })
+// @ts-ignore
+secondsElement.addEventListener('click', _ => { navigator.clipboard.writeText(timeElement.innerText + ':' + secondsElement.innerText)})
+// @ts-ignore
+dateElement.addEventListener('click', _ => { navigator.clipboard.writeText(dateElement.innerText) })
+
 // @ts-ignore
 colorPicker.value = document.body.style.backgroundColor;
 // Update background color when a color is picked
