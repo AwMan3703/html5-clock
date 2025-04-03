@@ -46,6 +46,13 @@ main {
   border-radius: 0.1em;
   cursor: copy;
 }
+#hour:active,
+#seconds:active,
+#date:active {
+  color: black;
+  background-color: white;
+  opacity: 0.5;
+}
 footer {
   display: flex;
   flex-direction: row;
